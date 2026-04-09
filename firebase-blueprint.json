@@ -1,0 +1,52 @@
+{
+  "entities": {
+    "User": {
+      "title": "User",
+      "description": "User profile and gamification stats",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "email": { "type": "string" },
+        "xp": { "type": "number" },
+        "level": { "type": "number" },
+        "streak": { "type": "number" },
+        "lastActiveDate": { "type": "string", "format": "date-time" }
+      },
+      "required": ["uid", "email", "xp", "level", "streak"]
+    },
+    "Topic": {
+      "title": "Topic",
+      "description": "Study topic generated from notes",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string" },
+        "title": { "type": "string" },
+        "content": { "type": "string" },
+        "summary": { "type": "string" },
+        "questions": { "type": "array" },
+        "flashcards": { "type": "array" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["userId", "title", "content", "summary", "questions", "flashcards", "createdAt"]
+    },
+    "Attempt": {
+      "title": "Attempt",
+      "description": "Quiz attempt history",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string" },
+        "topicId": { "type": "string" },
+        "score": { "type": "number" },
+        "total": { "type": "number" },
+        "xpEarned": { "type": "number" },
+        "date": { "type": "string", "format": "date-time" }
+      },
+      "required": ["userId", "topicId", "score", "total", "xpEarned", "date"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": { "schema": "User", "description": "User profiles" },
+    "/topics/{topicId}": { "schema": "Topic", "description": "Study topics" },
+    "/attempts/{attemptId}": { "schema": "Attempt", "description": "Quiz attempts" }
+  }
+}

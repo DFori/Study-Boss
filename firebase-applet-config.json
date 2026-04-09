@@ -1,0 +1,10 @@
+{
+  "projectId": "gdg-voice-agent",
+  "appId": "1:125343284830:web:c3e46de8cbfc01d0bcbecf",
+  "apiKey": "AIzaSyAt9fWv4IH8gq74EEP__QZFmBirUyQHYzY",
+  "authDomain": "gdg-voice-agent.firebaseapp.com",
+  "firestoreDatabaseId": "ai-studio-5578cdb9-db1b-4f17-a6c0-a8cba47aa6c5",
+  "storageBucket": "gdg-voice-agent.firebasestorage.app",
+  "messagingSenderId": "125343284830",
+  "measurementId": ""
+}
